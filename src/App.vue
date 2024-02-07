@@ -36,7 +36,11 @@
     margin: 0;
     padding: 0;
     font-family: "PT Sans Narrow", sans-serif;
-    font-weight: 900;
+    font-weight: 600;
+}
+
+template{
+    height: 100vh;
 }
 
 figure,

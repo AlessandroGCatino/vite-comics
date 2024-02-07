@@ -50,6 +50,28 @@
                         ]
                     }
 
+                ],
+                socials: [
+                    {
+                        name:"facebook",
+                        source: "src/assets/img/footer-facebook.png"
+                    },
+                    {
+                        name:"twitter",
+                        source: "src/assets/img/footer-twitter.png"
+                    },
+                    {
+                        name:"youtube",
+                        source: "src/assets/img/footer-youtube.png"
+                    },
+                    {
+                        name:"pinterest",
+                        source: "src/assets/img/footer-pinterest.png"
+                    },
+                    {
+                        name:"periscope",
+                        source: "src/assets/img/footer-periscope.png"
+                    }
                 ]
             }
         }
@@ -59,18 +81,36 @@
 <template>
     <div id="heroesBack">
         <div class="container">
-            <div v-for="(singleRow, index) in footerNavs" :key="index">
-                <h3 class="text-uppercase">{{ singleRow.name }}</h3>
-                <ul class="d-flex flex-column">
-                    <li v-for="(element) in singleRow.elements"
-                    class="text-capitalize">
-                        {{ element }}
-                    </li>
-                </ul>
+            <div class="left-column col-4">
+                <div v-for="(singleRow, index) in footerNavs" :key="index">
+                    <h3 class="text-uppercase">{{ singleRow.name }}</h3>
+                    <ul class="d-flex flex-column">
+                        <li v-for="(element) in singleRow.elements"
+                        class="text-capitalize">
+                            <a href="#"> {{ element }} </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
+            <div class="right-column col-6">
+                <figure>
+                </figure>
+                
+            </div>
         </div>
-
+    </div>
+    <div class="social">
+        <div class="container">
+            <div class="d-flex col-3">
+                <a href="#" class="text-uppercase"> sign-up now!</a>
+            </div>
+            <div class="d-flex gap-3">
+                <h3 class="text-uppercase">follow us</h3>
+                <figure v-for="(element) in socials">
+                    <img :src="element.source" :alt="element.name">
+                </figure>
+            </div>
+        </div>
     </div>
 
 </template>
@@ -85,7 +125,7 @@
     background-size: cover;
     color: white;
 }
-.container{
+.left-column{
     padding-block: 30px;
     height: 400px;
     display: flex;
@@ -94,11 +134,53 @@
     gap: 20px;
     align-items: flex-start;
     justify-content: flex-start;
+    ul{
+        padding: 0;
+        align-items: flex-start;
+        color: grey;
+        li{
+            &:hover{
+                color: white
+        };
+        };
+    }
 }
 
-ul{
-    padding: 0;
-    align-items: flex-start;
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.social .container{
+    align-items: center;
+    h3{
+        color: #0282f9;
+        font-weight: 700;
+        letter-spacing: .1rem;
+    }
+}
+
+.right-column{
+    height: 400px;
+    background-image: url(../assets/img/dc-logo-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.social{
+    background-color: #303030;
+    height: 144px;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    a{
+        border: 2px solid #0282f9;
+        letter-spacing: .2rem;
+        font-size: 20px;
+        padding: 15px;
+        color: white;
+    };
+    
 }
 
 
