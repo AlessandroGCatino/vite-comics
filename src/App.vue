@@ -39,7 +39,8 @@
     font-weight: 900;
 }
 
-figure{
+figure,
+ul{
     margin: 0;
 }
 
