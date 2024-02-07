@@ -38,4 +38,13 @@ figure{
     margin: 0;
 }
 
+li{
+    list-style-type: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
 </style>

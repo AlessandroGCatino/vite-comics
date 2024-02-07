@@ -54,19 +54,25 @@
 
 <template>
 
-    <div class="container">
-        <figure>
-            <img src="../assets/img/dc-logo.png" alt="Header Logo" width="50">
-        </figure>
+    <div id="external">
+        <div class="container py-3 d-flex justify-content-between">
+            <figure>
+                <img src="../assets/img/dc-logo.png" alt="Header Logo" width="70">
+            </figure>
+            <nav class="d-flex align-items-center">
+                <ul class="d-flex gap-3 text-uppercase">
+                    <li v-for= "(elements, index) in navElements" :key="index">
+                        <a :href="elements.link"> {{ elements.name }} </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
     </div>
 
 </template>
 
-<style>
+<style scoped>
 
-    .container{
-        background-color: red;
-    }
 
 </style>
