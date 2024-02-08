@@ -96,18 +96,21 @@
 <template>
     <main>
         <div class="backContent">
-            <div class="container p-5 d-flex flex-wrap ">
+            
+            <div class="container p-5 d-flex flex-wrap">
+            <h3>current series</h3>
             <SquareCard v-for="(element, index) in comics" :key="index"
             :thumbnail="element.thumb"
             :series="element.series"/>
             </div>
+            <button class="btn btn-primary">load more</button>
         </div>
         <CtaUser/>
     </main>
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
 main{
     background-image: url("../assets/img/jumbotron.jpg");
@@ -118,10 +121,29 @@ main{
 }
 div.backContent{
     background-color: #1c1c1c;
-}
-
-h2{
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    div{
+        position: relative;
+        h3{
+            position: absolute;
+            top:-27px;
+            left: 40px;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            background-color: #0c7cec;
+    
+        };
+    };
+    button{
+        width: 200px;
+        text-transform: uppercase;
+        border-radius: 0;
+        letter-spacing: 0.1rem;
+    }
 }
 
 </style>
