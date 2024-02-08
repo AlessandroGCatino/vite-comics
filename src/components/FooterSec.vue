@@ -169,7 +169,6 @@
 
 .social{
     background-color: #303030;
-    height: 144px;
     padding: 30px;
     align-items: center;
     justify-content: space-between;
