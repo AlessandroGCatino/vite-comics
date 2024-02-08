@@ -112,6 +112,8 @@
 
 <style scoped lang="scss">
 
+@use "../styles/partials/variables.scss" as *;
+
 main{
     background-image: url("../assets/img/jumbotron.jpg");
     background-size: cover;
@@ -134,7 +136,7 @@ div.backContent{
             color: white;
             text-transform: uppercase;
             padding: 10px 20px;
-            background-color: #0c7cec;
+            background-color: $dc-blue;
     
         };
     };

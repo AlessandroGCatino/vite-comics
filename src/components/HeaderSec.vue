@@ -72,12 +72,14 @@
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
+@use "../styles/partials/variables.scss" as *;
 
 li{
     position: relative;
     &:hover{
-        color: #0282f9;
+        color: $dc-blue;
     }
 }
 
@@ -87,7 +89,7 @@ li:hover:after{
     width: 100%;
     left: 0;
     bottom: -40px;
-    border-bottom: 3px solid #0282f9;
+    border-bottom: 3px solid $dc-blue;
 }
 
 </style>

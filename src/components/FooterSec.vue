@@ -115,7 +115,9 @@
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
+@use "../styles/partials/variables.scss" as *;
 
 #heroesBack{
     background-image: url(../assets/img/footer-bg.jpg);
@@ -153,7 +155,7 @@
 .social .container{
     align-items: center;
     h3{
-        color: #0282f9;
+        color: $dc-blue;
         font-weight: 700;
         letter-spacing: .1rem;
     }
@@ -173,7 +175,7 @@
     align-items: center;
     justify-content: space-between;
     a{
-        border: 2px solid #0282f9;
+        border: 2px solid $dc-blue;
         letter-spacing: .2rem;
         font-size: 20px;
         padding: 15px;

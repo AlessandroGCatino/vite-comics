@@ -50,10 +50,12 @@
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
+@use "../styles/partials/variables.scss" as *;
 
 #ctaBack{
-    background-color: #0282f9;
+    background-color: $dc-blue;
     color: white;
     font-weight: 500;
 }
