@@ -74,5 +74,20 @@
 
 <style scoped>
 
+li{
+    position: relative;
+    &:hover{
+        color: #0282f9;
+    }
+}
+
+li:hover:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    bottom: -40px;
+    border-bottom: 3px solid #0282f9;
+}
 
 </style>
